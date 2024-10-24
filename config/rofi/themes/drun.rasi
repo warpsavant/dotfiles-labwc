@@ -1,0 +1,13 @@
+@import "dmenu.rasi"
+
+configuration {
+	disable-history: false;
+
+	modi: "drun";
+	drun-match-fields: "name,exec";
+	drun-display-format: "{name}";
+}
+
+inputbar {
+	children: [ entry ];
+}

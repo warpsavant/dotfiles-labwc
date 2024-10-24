@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# Only used in Labwc
+
+cliphist list | rofi -no-lazy-grub -dmenu -theme dmenu -display-columns 2 | cliphist decode | wl-copy

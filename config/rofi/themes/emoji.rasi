@@ -1,0 +1,28 @@
+@import "dmenu.rasi"
+
+configuration {
+	modi: "emoji";
+}
+
+mainbox {
+	children: [ inputbar, message, listview ];
+}
+
+inputbar {
+	children: [ entry ];
+}
+
+message {
+	background-color: @message-bg-color;
+
+	spacing: 0;
+
+	border: 0 0 1px 0;
+	border-color: @message-border-color;
+}
+
+textbox {
+	text-color: @main-fg-color;
+	background-color: transparent;
+	padding: 5px 8px;
+}

@@ -1,0 +1,22 @@
+layer=overlay
+default-timeout=10000
+
+anchor=top-center
+
+width=320
+height=100
+
+margin=10
+padding=8
+
+font=JetBrains Mono 9
+
+background-color=#383c4af2
+text-color=#d3dae3ff
+
+border-size=1
+border-radius=2
+border-color=#21252bff
+
+icon-path=/usr/share/icons/Papirus-Dark
+max-icon-size=32

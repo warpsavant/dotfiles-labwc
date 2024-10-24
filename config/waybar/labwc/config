@@ -1,0 +1,104 @@
+{
+	"layer": "top",
+	"output": "HDMI-A-1",
+	"position": "top",
+	"height": 28,
+	"modules-left": [
+		"cosmic/workspaces",
+		"custom/separator",
+		"wlr/taskbar"
+	],
+	"modules-center": ["clock"],
+	"modules-right": [
+		"tray",
+		"idle_inhibitor",
+		"network",
+		"bluetooth",
+		"custom/separator",
+		"pulseaudio",
+		"custom/separator",
+		"battery"
+	],
+
+	"custom/separator": {
+		"interval": "once",
+		"tooltip": false,
+		"format": "|"
+	},
+
+	"cosmic/workspaces": {
+		"sort-by-number": true,
+		"format-icons": {
+			"Workspace 1": "1",
+			"Workspace 2": "2",
+			"Workspace 3": "3",
+			"Workspace 4": "4",
+			"Workspace 5": "5"
+		},
+		"format": "{icon}",
+		"on-click": "activate"
+	},
+
+	"wlr/taskbar": {
+		"icon-theme": "Papirus-Dark",
+		"icon-size": 16,
+		"format": "{icon}",
+		"tooltip-format": "{title:.50}",
+		"on-click": "minimize-raise"
+	},
+
+	"clock": {
+		"timezone": "Europe/Moscow",
+		"format": "{:%d.%m%t%H∶%M}",
+		"tooltip-format": "{:%a, %b %d}"
+	},
+
+	"tray": {
+		"icon-size": 14,
+		"spacing": 20
+	},
+
+	"idle_inhibitor": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"network": {
+		"format": "",
+		"format-disconnected": "",
+		"tooltip-format": "{essid} ({signalStrength}%)",
+		"tooltip-format-disconnected": "Disconnected"
+	},
+
+	"bluetooth": {
+		"format": "",
+		"tooltip-format": "Status: {status}",
+		"tooltip-format-connected": "{device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_alias}",
+		"tooltip-format-enumerate-connected-battery": "{device_alias} ({device_battery_percentage}%)"
+	},
+
+	"pulseaudio": {
+		"scroll-step": 5.0,
+		"format-icons": ["", "", ""],
+		"format": "<span color='#9cdbf4'>{icon}</span> {volume:2}%",
+		"format-muted": "<span color='#9cdbf4'></span> <span alpha='35%'>{volume:2}%</span>",
+		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+	},
+
+	"battery": {
+		"bat": "BAT1",
+		"adapter": "ACAD",
+		"states": {
+			"warning": 20,
+			"critical": 5
+		},
+		"format-icons": ["", "", "", "", ""],
+		"format": "<span color='#abd685'>{icon}</span> {capacity:2}%",
+		"format-charging": "<span color='#abd685'></span> {capacity:2}%",
+		"format-warning": "<span color='#f5a678' font='Font Awesome 6 Pro'>{icon}</span> {capacity:2}%",
+		"format-critical": "<span color='#fc7690' font='Font Awesome 6 Pro'></span> {capacity:2}%"
+	}
+}
+
+// vim:ft=jsonc

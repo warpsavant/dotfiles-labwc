@@ -1,0 +1,4 @@
+[Default]
+save_dir=$XDG_SCREENSHOTS_DIR
+save_filename_format=Screenshot %Y-%m-%d at %H-%M-%S.png
+text_font=Inter SemiBold

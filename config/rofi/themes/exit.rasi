@@ -1,0 +1,25 @@
+@import "dmenu.rasi"
+
+configuration {
+	modi: "exit:~/.config/rofi/exit.sh";
+}
+
+window {
+	width: 130;
+}
+
+mainbox {
+	children: [ listview ];
+}
+
+listview {
+	lines: 5;
+}
+
+element selected {
+	background-color: @exit-bg-color;
+}
+
+element-text selected {
+	text-color: @exit-fg-color;
+}

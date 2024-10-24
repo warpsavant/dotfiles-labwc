@@ -1,0 +1,87 @@
+@import "colors.rasi"
+
+configuration {
+	show-icons: false;
+	fullscreen: false;
+	sidebar-mode: false;
+	disable-history: true;
+	hide-scrollbar: true;
+
+	font: "JetBrains Mono 9";
+}
+
+window {
+	location: center;
+	transparency: "real";
+
+	width: 230px;
+
+	background-color: transparent;
+
+	border: 1px;
+	border-radius: 2px;
+	border-color: @main-border-color;
+}
+
+mainbox {
+	children: [ inputbar, listview ];
+	background-color: transparent;
+	spacing: 0;
+}
+
+inputbar {
+	children: [ entry, num-filtered-rows ];
+
+	background-color: @input-bg-color;
+
+	padding: 5px 8px;
+	spacing: 0;
+
+	border: 0 0 1px 0;
+	border-color: @main-border-color;
+}
+
+entry {
+	blink: true;
+	vertical-align: 0.5;
+	text-color: @main-fg-color;
+	background-color: transparent;
+}
+
+num-filtered-rows {
+	text-color: @num-fg-color;
+	background-color: transparent;
+}
+
+listview {
+	cycle: false;
+	dynamic: true;
+	layout: vertical;
+
+	lines: 6;
+	columns: 1;
+
+	background-color: @main-bg-color;
+	spacing: 0;
+}
+
+element {
+	orientation: horizontal;
+	background-color: inherit;
+	padding: 5px 10px;
+}
+
+element-text {
+	expand: true;
+	vertical-align: 0.5;
+	text-color: @element-fg-color;
+	background-color: transparent;
+}
+
+element selected {
+	background-color: @drun-bg-color;
+}
+
+element-text selected {
+	text-color: @drun-fg-color;
+}

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# Only used in Labwc
+
+rofi -no-lazy-grab -show emoji -emoji-format "<span face='Noto Color Emoji'>{emoji}</span> {name}" -theme emoji

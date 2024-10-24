@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# Only used in Labwc
+
+case $1 in
+	full ) grim - | swappy -f - ;;
+	area ) grim -g "$(slurp -b 000000cc -c d3dae3 -d)" - | swappy -f - ;;
+esac

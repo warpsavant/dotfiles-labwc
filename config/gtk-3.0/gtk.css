@@ -1,0 +1,11 @@
+filechooser actionbar > revealer > box {
+	background-color: transparent;
+}
+
+.nemo-window .primary-toolbar {
+	padding-top: 5px;
+}
+
+.nemo-window .toolbar button {
+	padding: 0;
+}

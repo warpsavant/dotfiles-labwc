@@ -1,0 +1,7 @@
+kanshi >/dev/null 2>&1 &
+wlsunset -t 4500 -l 55.7 -L 37.6 >/dev/null 2>&1 &
+swayidle >/dev/null 2>&1 &
+swaybg -i ~/Pictures/Wallpapers/wallpaper.jpg -m fill >/dev/null 2>&1 &
+waybar -c ~/.config/waybar/labwc/config -s ~/.config/waybar/labwc/style.css --log-level off &
+wl-paste --watch cliphist store >/dev/null 2>&1 &
+mako >/dev/null 2>&1 &

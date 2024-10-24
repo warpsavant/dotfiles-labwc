@@ -1,0 +1,19 @@
+* {
+	main-fg-color:		#d3dae3;
+	main-bg-color:		#383c4a;
+	main-border-color:	#21252b;
+
+	input-bg-color:		#2c303bf2;
+	num-fg-color:		#d3dae359;
+
+	message-bg-color:	#3c4050;
+	message-border-color:	#2c3139;
+
+	element-fg-color:	#d3dae3de;
+
+	drun-fg-color:		#182c43;
+	drun-bg-color:		#68a2e6;
+
+	exit-fg-color:		#47402b;
+	exit-bg-color:		#eed690;
+}

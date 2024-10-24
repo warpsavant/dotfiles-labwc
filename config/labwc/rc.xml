@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+
+<labwc_config>
+  <core>
+    <gap>10</gap>
+  </core>
+
+  <!-- Appearance -->
+  <theme>
+    <name>Arc-Dark-labwc</name>
+    <icon>Papirus-Dark</icon>
+    <cornerRadius>5</cornerRadius>
+    <keepBorder>yes</keepBorder>
+    <dropShadows>yes</dropShadows>
+    <font place="ActiveWindow" name="JetBrains Mono" size="9" weight="bold" />
+    <font place="InactiveWindow" name="JetBrains Mono" size="9" weight="bold" />
+    <font place="MenuHeader" name="JetBrains Mono" size="8" weight="bold" slant="oblique"/>
+    <font place="MenuItem" name="JetBrains Mono" size="9" />
+    <font place="OnScreenDisplay" name="JetBrains Mono" size="9" />
+  </theme>
+
+  <!-- Alt-Tab -->
+  <windowSwitcher show="yes" preview="yes" outlines="yes">
+    <fields>
+      <field content="trimmed_identifier" width="20%" />
+      <field content="custom" format="|  %t" width="80%" />
+    </fields>
+  </windowSwitcher>
+
+  <!-- Workspaces -->
+  <desktops number="5">
+    <popupTime>1000</popupTime>
+  </desktops>
+
+  <!-- Keyboard binds -->
+  <keyboard>
+
+    <!-- Use 'wev' to get key identifiers -->
+
+    <!-- Multimedia keys -->
+
+    <keybind key="XF86_AudioLowerVolume" allowWhenLocked="yes">
+      <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-" />
+    </keybind>
+    <keybind key="XF86_AudioRaiseVolume" allowWhenLocked="yes">
+      <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+" />
+    </keybind>
+    <keybind key="XF86_AudioMute" allowWhenLocked="yes">
+      <action name="Execute" command="wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" />
+    </keybind>
+
+    <keybind key="XF86_AudioPrev" allowWhenLocked="yes">
+      <action name="Execute" command="playerctl previous" />
+    </keybind>
+    <keybind key="XF86_AudioNext" allowWhenLocked="yes">
+      <action name="Execute" command="playerctl next" />
+    </keybind>
+    <keybind key="XF86_AudioPlay" allowWhenLocked="yes">
+      <action name="Execute" command="playerctl play-pause" />
+    </keybind>
+
+    <!-- Screenshot -->
+    <keybind key="Print">
+      <action name="Execute" command="grim-wrapper full" />
+    </keybind>
+
+    <keybind key="S-Print">
+      <action name="Execute" command="grim-wrapper area" />
+    </keybind>
+
+    <!-- Rofi -->
+
+    <keybind key="W-d">
+      <action name="Execute" command="rofi -no-lazy-grub -show drun -theme drun" />
+    </keybind>
+
+    <keybind key="W-S-e">
+      <action name="Execute" command="rofi -no-lazy-grub -show exit -theme exit" />
+    </keybind>
+
+    <keybind key="W-c">
+      <action name="Execute" command="rofi-clip" />
+    </keybind>
+
+    <keybind key="W-period">
+      <action name="Execute" command="rofi-emoji" />
+    </keybind>
+
+    <!-- Terminal emulator -->
+    <keybind key="W-Return">
+      <action name="Execute" command="foot" />
+    </keybind>
+
+    <!-- File manager -->
+    <keybind key="W-e">
+      <action name="Execute" command="nemo" />
+    </keybind>
+
+    <!-- Window management -->
+
+    <keybind key="A-Tab">
+      <action name="NextWindow" />
+    </keybind>
+
+    <keybind key="A-Space">
+      <action name="ShowMenu" menu="client-menu" />
+    </keybind>
+
+    <keybind key="W-S-q">
+      <action name="Close" />
+    </keybind>
+
+    <keybind key="W-S-minus">
+      <action name="Iconify" />
+    </keybind>
+
+    <keybind key="W-r">
+      <action name="Resize" />
+    </keybind>
+
+    <keybind key="W-S-f">
+      <action name="ToggleFullscreen" />
+    </keybind>
+    <keybind key="W-f">
+      <action name="ToggleMaximize" />
+    </keybind>
+
+    <keybind key="W-Up">
+      <action name="ToggleSnapToEdge" direction="up" />
+    </keybind>
+    <keybind key="W-Right">
+      <action name="ToggleSnapToEdge" direction="right" />
+    </keybind>
+    <keybind key="W-Down">
+      <action name="ToggleSnapToEdge" direction="down" />
+    </keybind>
+    <keybind key="W-Left">
+      <action name="ToggleSnapToEdge" direction="left" />
+    </keybind>
+
+    <!-- Workspaces -->
+    <keybind key="W-1">
+      <action name="GoToDesktop" to="1" wrap="no" />
+    </keybind>
+    <keybind key="W-2">
+      <action name="GoToDesktop" to="2" wrap="no" />
+    </keybind>
+    <keybind key="W-3">
+      <action name="GoToDesktop" to="3" wrap="no" />
+    </keybind>
+    <keybind key="W-4">
+      <action name="GoToDesktop" to="4" wrap="no" />
+    </keybind>
+    <keybind key="W-5">
+      <action name="GoToDesktop" to="5" wrap="no" />
+    </keybind>
+
+    <keybind key="W-S-1">
+      <action name="SendToDesktop" to="1" follow="no" wrap="no" />
+    </keybind>
+    <keybind key="W-S-2">
+      <action name="SendToDesktop" to="2" follow="no" wrap="no" />
+    </keybind>
+    <keybind key="W-S-3">
+      <action name="SendToDesktop" to="3" follow="no" wrap="no" />
+    </keybind>
+    <keybind key="W-S-4">
+      <action name="SendToDesktop" to="4" follow="no" wrap="no" />
+    </keybind>
+    <keybind key="W-S-5">
+      <action name="SendToDesktop" to="5" follow="no" wrap="no" />
+    </keybind>
+
+    <!-- Reload config -->
+    <keybind key="W-S-c">
+      <action name="Reconfigure" />
+    </keybind>
+
+  </keyboard>
+
+  <!-- Mouse binds -->
+  <mouse>
+    <default />
+
+    <context name="Frame">
+      <mousebind button="W-Left" action="Press">
+        <action name="Focus" />
+        <action name="Raise" />
+      </mousebind>
+      <mousebind button="W-Left" action="Drag">
+        <action name="Move" />
+      </mousebind>
+      <mousebind button="W-Right" action="Press">
+        <action name="Focus" />
+        <action name="Raise" />
+      </mousebind>
+      <mousebind button="W-Right" action="Drag">
+        <action name="Resize" />
+      </mousebind>
+    </context>
+
+    <context name="Root">
+      <mousebind button="Left" action="Press">
+        <action name="None" />
+      </mousebind>
+      <mousebind button="Right" action="Press">
+        <action name="ShowMenu" menu="root-menu" />
+      </mousebind>
+      <mousebind button="Middle" action="Press">
+        <action name="None" />
+      </mousebind>
+      <mousebind direction="Up" action="Scroll">
+        <action name="None" />
+      </mousebind>
+      <mousebind direction="Down" action="Scroll">
+        <action name="None" />
+      </mousebind>
+    </context>
+
+  </mouse>
+
+  <!-- Input -->
+  <libinput>
+
+    <!--
+      Use 'libinput devices-list' for device identifiers
+    -->
+
+    <device category="ELAN2202:00 04F3:306D Touchpad">
+      <tap>yes</tap>
+      <naturalScroll>yes</naturalScroll>
+      <accelProfile>adaptive</accelProfile>
+      <pointerSpeed>-0.115</pointerSpeed>
+      <scrollFactor>0.25</scrollFactor>
+    </device>
+
+    <device category="COMPANY USB Device">
+      <accelProfile>flat</accelProfile>
+      <pointerSpeed>-0.285</pointerSpeed>
+    </device>
+
+  </libinput>
+
+  <!-- Window rules -->
+  <windowRules>
+    <windowRule identifier="swayimg" serverDecoration="yes" />
+  </windowRules>
+
+</labwc_config>
+
+<!-- 
+vim: ts=2 sts=2 sw=2 et
+-->

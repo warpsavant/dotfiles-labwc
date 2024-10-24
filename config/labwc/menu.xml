@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu>
+<menu id="client-menu">
+  <item label="Minimize">
+    <action name="Iconify" />
+  </item>
+  <item label="Maximize">
+    <action name="ToggleMaximize" />
+  </item>
+  <item label="Fullscreen">
+    <action name="ToggleFullscreen" />
+  </item>
+  <item label="Decorations">
+    <action name="ToggleDecorations" />
+  </item>
+  <item label="Always On Top">
+    <action name="ToggleAlwaysOnTop" />
+  </item>
+
+  <menu id="workspaces" label="Move to">
+    <item label="Workspace 1">
+      <action name="SendToDesktop" to="1" follow="no" wrap="no" />
+    </item>
+    <item label="Workspace 2">
+      <action name="SendToDesktop" to="2" follow="no" wrap="no" />
+    </item>
+    <item label="Workspace 3">
+      <action name="SendToDesktop" to="3" follow="no" wrap="no" />
+    </item>
+    <item label="Workspace 4">
+      <action name="SendToDesktop" to="4" follow="no" wrap="no" />
+    </item>
+    <item label="Workspace 5">
+      <action name="SendToDesktop" to="5" follow="no" wrap="no" />
+    </item>
+  </menu>
+
+  <item label="Close">
+    <action name="Close" />
+  </item>
+</menu>
+
+<menu id="root-menu">
+
+  <separator label="Applications"/>
+
+  <!--
+    Use 'labwc-menu-generator' to generate applications menu list
+  -->
+
+  <separator label="Configuration" />
+
+  <menu id="Output" label="Output">
+    <item label="Edit">
+    <action name="Execute">
+      <command>foot -T Edit nvim ~/.config/kanshi/config</command>
+    </action>
+    </item>
+    <item label="Reconfigure">
+      <action name="Execute"><command>kanshictl reload</command></action>
+    </item>
+  </menu>
+
+  <menu id="Waybar" label="Waybar">
+    <menu id="Waybar-Edit" label="Edit">
+      <item label="config">
+        <action name="Execute"><command>foot -T config nvim ~/.config/waybar/labwc/config</command></action>
+      </item>
+      <item label="style.css">
+        <action name="Execute"><command>foot -T style.css nvim ~/.config/waybar/labwc/style.css</command></action>
+      </item>
+    </menu>
+    <item label="Restart">
+      <action name="Execute"><command>killall -SIGUSR2 waybar</command></action>
+    </item>
+  </menu>
+
+  <menu id="Labwc" label="Labwc">
+    <menu id="Labwc-Edit" label="Edit">
+      <item label="autostart">
+        <action name="Execute">
+          <command>foot -T autostart nvim ~/.config/labwc/autostart</command>
+        </action>
+      </item>
+      <item label="environment">
+        <action name="Execute">
+          <command>foot -T environment nvim ~/.config/labwc/environment</command>
+        </action>
+      </item>
+      <item label="menu.xml">
+        <action name="Execute">
+          <command>foot -T menu.xml nvim ~/.config/labwc/menu.xml</command>
+        </action>
+      </item>
+      <item label="rc.xml">
+        <action name="Execute">
+          <command>foot -T rc.xml nvim ~/.config/labwc/rc.xml</command>
+        </action>
+      </item>
+    </menu>
+    <item label="Reconfigure">
+      <action name="Reconfigure" />
+    </item>
+  </menu>
+
+  <separator label="Exit" />
+
+  <menu id="session-menu" label="Session">
+    <item label="Lock">
+      <action name="Execute" command="swaylock" />
+    </item>
+    <item label="Log Out">
+      <action name="Exit" />
+    </item>
+  </menu>
+
+  <menu id="power-menu" label="Power">
+    <item label="Power Off">
+      <action name="Execute" command="systemctl poweroff" />
+    </item>
+    <item label="Reboot">
+      <action name="Execute" command="systemctl reboot" />
+    </item>
+    <item label="Suspend">
+      <action name="Execute" command="systemctl suspend" />
+    </item>
+  </menu>
+</menu>
+
+</openbox_menu>
+
+<!-- 
+vim: ts=2 sts=2 sw=2 et
+-->
